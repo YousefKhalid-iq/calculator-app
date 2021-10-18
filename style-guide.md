@@ -91,3 +91,5 @@ The designs were created to the following widths:
 
 - Family: [Spartan](https://fonts.google.com/specimen/Spartan)
 - Weights: 700
+- What to type :
+- font-family: 'Spartan', sans-serif;

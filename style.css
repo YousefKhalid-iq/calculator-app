@@ -32,8 +32,27 @@ body {
 
 .output {
   background-color: hsl(224, 36%, 15%);
-  height: 20%;
   border-radius: 0.75rem;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  height: 90%;
+  margin-bottom: 5%;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-op {
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+}
+
+.output .current-op {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
 }
 
 .buttons-grid {
@@ -44,7 +63,7 @@ body {
   grid-template-columns: repeat(4, 60px);
   grid-template-rows: repeat(5, 60px);
   background-color: hsl(223, 31%, 20%);
-  padding: 5% 0;
+  padding: 10% 0;
   border-radius: 0.75rem;
 }
 
