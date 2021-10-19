@@ -57,14 +57,40 @@ h1 {
 
 .theme-btn-cont {
   text-align: center;
-  width: 70px;
-  background-color: hsl(223, 31%, 20%);
 }
 
 .theme-btn-cont button {
+}
+
+.toggle-btn {
+  width: 80px;
+  height: 20px;
+  background-color: hsl(223, 31%, 20%);
+  display: flex;
+  border-radius: 2.5rem;
+}
+
+.toggle-btn .theme1, .toggle-btn .theme2, .toggle-btn .theme3 {
+  width: 15px;
+  height: 15px;
+  background: hsl(6, 63%, 50%);
   border-radius: 50%;
-  border: 0;
-  width: 20px;
+  transform: translate(0, 16%);
+}
+
+.toggle-btn .theme1 {
+  margin-right: 13px;
+  margin-left: 3px;
+}
+
+.toggle-btn .theme2 {
+  background: hsl(25, 98%, 40%);
+  margin-right: 13px;
+}
+
+.toggle-btn .theme3 {
+  background: hsl(176, 100%, 44%);
+  margin-left: 3px;
 }
 
 .themes-cont {
