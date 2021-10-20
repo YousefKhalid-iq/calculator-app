@@ -25,7 +25,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 4fr;
   width: 330px;
-  margin: 0 auto;
+  margin: 0 auto 5% auto;
 }
 
 h1 {
@@ -59,38 +59,44 @@ h1 {
   text-align: center;
 }
 
-.theme-btn-cont button {
-}
-
 .toggle-btn {
-  width: 80px;
+  width: 70px;
   height: 20px;
   background-color: hsl(223, 31%, 20%);
   display: flex;
   border-radius: 2.5rem;
 }
 
-.toggle-btn .theme1, .toggle-btn .theme2, .toggle-btn .theme3 {
-  width: 15px;
-  height: 15px;
+.toggle-btn #theme1, .toggle-btn #theme2, .toggle-btn #theme3 {
+  width: 14px;
+  height: 14px;
   background: hsl(6, 63%, 50%);
   border-radius: 50%;
-  transform: translate(0, 16%);
+  transform: translate(0, 25%);
+  cursor: pointer;
+  border: 0;
 }
 
-.toggle-btn .theme1 {
+.theme1-cont, .theme2-cont, .theme3-cont {
+  cursor: pointer;
+  width: 33%;
+}
+
+.toggle-btn #theme1 {
   margin-right: 13px;
-  margin-left: 3px;
+  margin-left: 4px;
+  visibility: visible;
 }
 
-.toggle-btn .theme2 {
+.toggle-btn #theme2 {
   background: hsl(25, 98%, 40%);
-  margin-right: 13px;
+  visibility: hidden;
 }
 
-.toggle-btn .theme3 {
+.toggle-btn #theme3 {
   background: hsl(176, 100%, 44%);
-  margin-left: 3px;
+  margin-right: -2px;
+  visibility: hidden;
 }
 
 .themes-cont {
@@ -116,7 +122,7 @@ h1 {
   justify-content: space-around;
   flex-direction: column;
   padding: 10px;
-  height: 90%;
+  height: 80%;
   margin-bottom: 5%;
   word-wrap: break-word;
   word-break: break-all;
@@ -140,7 +146,7 @@ h1 {
   grid-template-columns: repeat(4, 60px);
   grid-template-rows: repeat(5, 60px);
   background-color: hsl(223, 31%, 20%);
-  padding: 10% 0;
+  padding: 5% 0;
   border-radius: 0.75rem;
 }
 
@@ -179,9 +185,10 @@ h1 {
 }
 
 .attribution { 
-  font-size: 11px; text-align: center; 
+  font-size: 11px; text-align: center;
+  color: hsl(0, 0%, 100%); 
 }
 
 .attribution a { 
-  color: hsl(228, 45%, 44%); 
+  color: hsl(6, 63%, 50%); 
 }
