@@ -8,7 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link  rel="stylesheet" type="text/css" href="css/style.css">
+  <link id="theme-style" rel="stylesheet" type="text/css" href="">
+  <link id="theme-style" rel="stylesheet" type="text/css" href="">
   <title>Frontend Mentor | Calculator app</title>
 </head>
 <body>
@@ -21,36 +23,28 @@
         <div class="theme-select-cont">
           <p class="theme-p">THEME</p>
           <div class="theme-toggle-cont">
-          <div class="themes-cont">
-            <div>
-              <p class="p1">
-                1
-              </p>
-            </div>
-            <div>
-              <p class="p2">
-                2
-              </p>
-            </div>
-            <div>
-              <p>
-                3
-              </p>
-            </div>
-          </div>
-            <div class="theme-btn-cont">
-              <div class="toggle-btn">
-                <div class="theme1-cont">
-                  <button onclick="firstThemeToggle()" id="theme1"></button>
-                </div>
-                <div class="theme2-cont">
-                  <button onclick="secondThemeToggle()" id="theme2"></button>
-                </div>
-                <div class="theme3-cont">
-                  <button onclick="thirdThemeToggle()" id="theme3"></button>
-                </div>
+            <div class="themes-cont">
+              <div>
+                <p class="p1">
+                  1
+                </p>
+              </div>
+              <div>
+                <p class="p2">
+                  2
+                </p>
+              </div>
+              <div>
+                <p>
+                  3
+                </p>
               </div>
             </div>
+            <label id="toggle">
+              <input data-mode="theme1" type="radio" id="input1" class="input"  name="input" checked>
+              <input data-mode="theme2" type="radio" id="input2" class="input" name="input">
+              <input data-mode="theme3" type="radio" id="input3" class="input" name="input">
+            </label>
           </div>
         </div>
       </div>

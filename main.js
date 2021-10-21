@@ -157,57 +157,29 @@ deleteButton.addEventListener('click', button => {
 
 // (--Theme changer section--)
 
-const toggle1 = document.getElementById("theme1");
-const toggle2 = document.getElementById("theme2");
-const toggle3 = document.getElementById("theme3");
+const input1 = document.getElementById("input1");
+const input2 = document.getElementById("input2");
+const input3 = document.getElementById("input3");
+let themeChanger = document.getElementsByClassName('input');
 
-const cont1 = document.querySelector(".theme1-cont");
-const cont2 = document.querySelector(".theme2-cont");
-const cont3 = document.querySelector(".theme3-cont");
-
-function firstThemeToggle() {
-	if (cont1.style.visibility === "hidden") {
-		cont1.style.visibility = "visible";
-		cont2.style.visibility = "hidden";
-		cont3.style.visibility = "hidden";
-	} else {
-		cont1.style.visibility = "visible";
-		cont2.style.visibility = "hidden";
-		cont3.style.visibility = "hidden";
-		toggle1.addEventListener('click', function() {
-			cont1.classList.toggle("select");
-		});
-	}
+for (let i=0; themeChanger.length > i; i++) {
+	themeChanger[i].addEventListener('click', function() {
+		let mode = this.dataset.mode;
+		console.log('clicked!', mode)
+		setTheme(mode);
+	})
 }
 
-function secondThemeToggle() {
-	if (cont2.style.visibility === "hidden") {
-		toggle2.style.visibility = "visible";
-		cont1.style.visibility = "hidden";
-		cont3.style.visibility = "hidden";
-	} else {
-		cont2.style.visibility = "visible";
-		cont1.style.visibility = "hidden";
-		cont3.style.visibility = "hidden";
-		toggle2.addEventListener('click', function() {
-			cont2.classList.toggle("select");
-		});
+function setTheme(mode) {
+	if(mode == 'theme1') {
+		document.getElementById('theme-style').href = 'css/style.css';
+	}
+
+	if(mode == 'theme2') {
+		document.getElementById('theme-style').href = 'css/theme2.css';
+	}
+
+	if(mode == 'theme3') {
+		document.getElementById('theme-style').href = 'css/theme3.css';
 	}
 }
-
-function thirdThemeToggle() {
-	if (cont3.style.visibility === "hidden") {
-		cont3.style.visibility = "visible";
-		cont2.style.visibility = "hidden";
-		cont1.style.visibility = "hidden";
-	} else {
-		cont3.style.visibility = "visible";
-		cont2.style.visibility = "hidden";
-		cont1.style.visibility = "hidden";
-		toggle3.addEventListener('click', function() {
-			cont3.classList.toggle("select");
-		});
-	}
-}
-
-
